@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>JQVMap - World Map</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+    <link href="dist/jqvmap.css" media="screen" rel="stylesheet" type="text/css"/>
+ <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="dist/jquery.vmap.js"></script>
+    <script type="text/javascript" src="dist/maps/jquery.vmap.world.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/jquery.vmap.sampledata.js"></script>
+    <script>
+      jQuery(document).ready(function () { 
+        jQuery('#vmap').vectorMap({
+          map: 'world_en',
+          backgroundColor: '#333333',
+          color: '#ffffff',
+          hoverOpacity: 0.7,
+          selectedColor: '#666666',
+          enableZoom: true,
+          showTooltip: true,
+          scaleColors: ['#C8EEFF', '#006491'],
+          values: sample_data,
+          normalizeFunction: 'polynomial'
+        });
+      });
+    </script>
+     <style type="text/css"> 
+      #vmap svg{
+        background-color:#607d8b !important; 
+      }
+      .globl_properties{
+        background: #607d8b;
+        color: #fff;
+        text-align: center;
+      }
+      .numbers_count{
+          font-weight: 700;
+          font-size: 28px;
+          line-height: 9px;
+      }
+      .globl_properties p{
+         font-weight: 700;
+      }
+       .globl_properties h3{
+          padding: 7px;
+      }
+      .jqvmap-region {
+        fill: #fff;
+      }
+    </style> 
+  </head>
+  <body>
+     <div class="row globl_properties">
+       <div class="col-sm-12">
+         <h3 class="text-center">Redifining The Reality In Realty</h3> 
+       </div>
+     </div>
+    <div id="vmap" style="width: 100%; height: 400px;"></div>
+      <div class="row globl_properties">
+          <div class="col-sm-1"></div> 
+          <div class="col-sm-2">
+            <p class="numbers_count">17945 +</p> 
+            <p>Total Number of Listing</p>
+          </div>
+          <div class="col-sm-2">
+            <p class="numbers_count">10560 +</p>
+            <p>Total Number of Users</p>
+          </div>
+          <div class="col-sm-2"> 
+             <p class="numbers_count">1220560 +</p> 
+             <p>Total Number of Views</p>
+          </div>
+          <div class="col-sm-2">
+             <p class="numbers_count">5160 +</p>
+             <p>Lead Generated</p>
+          </div>
+          <div class="col-sm-2">
+             <p class="numbers_count">1070 +</p>
+             <p>New Listing</p>
+          </div>
+          <div class="col-sm-1"></div>
+      </div>
+  </body>
+</html>
